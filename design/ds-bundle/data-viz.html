@@ -1,0 +1,111 @@
+<!-- @dsCard group="Components" -->
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { display: flex; font-family: ui-monospace, Menlo, monospace; }
+  .half { flex: 1; padding: 26px; }
+  .night { background: #0F2A1E; color: #F1ECDB; }
+  .day { background: #f4efe4; color: #2B2E66; }
+  h2 { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.55; margin: 0 0 10px; }
+  .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .bar-row .lbl { width: 58px; flex: none; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+  .bar-row .val { width: 32px; flex: none; text-align: right; font-size: 10px; opacity: 0.8; }
+  .track { height: 6px; border-radius: 999px; overflow: hidden; flex: 1; }
+  .night .track { background: rgba(241,236,219,0.07); }
+  .day .track { background: rgba(43,46,102,0.08); }
+  .fill { height: 100%; border-radius: 999px; }
+  .section { margin-bottom: 18px; }
+  .heat { display: flex; gap: 4px; }
+  .cell { width: 16px; height: 16px; border-radius: 2px; }
+  svg { display: block; }
+  .donut-row { display: flex; align-items: center; gap: 16px; }
+  .dlegend { font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; display: grid; gap: 4px; }
+  .night .dlegend { color: #A2B8A7; } .day .dlegend { color: #6B6D9E; }
+  .dlegend i { display: inline-block; width: 7px; height: 7px; margin-right: 5px; border-radius: 999px; }
+  .cap { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.55; margin-top: 4px; }
+</style>
+<body>
+  <div class="half night">
+    <div class="section">
+      <h2>Progress — one hue per domain</h2>
+      <div class="bar-row"><span class="lbl">Savings</span><div class="track"><div class="fill" style="width:64%;background:linear-gradient(90deg,#B3548C,#E989B7)"></div></div><span class="val">64</span></div>
+      <div class="bar-row"><span class="lbl">Reading</span><div class="track"><div class="fill" style="width:42%;background:linear-gradient(90deg,#4A52C8,#8FA0F0)"></div></div><span class="val">42</span></div>
+      <div class="bar-row"><span class="lbl">Fitness</span><div class="track"><div class="fill" style="width:78%;background:linear-gradient(90deg,#B5882C,#E3C86B)"></div></div><span class="val">78</span></div>
+    </div>
+    <div class="section">
+      <h2>Habit heat — ember &amp; sky ramps</h2>
+      <div class="heat" style="margin-bottom:6px">
+        <span class="cell" style="background:rgba(241,236,219,0.05)"></span>
+        <span class="cell" style="background:rgba(233,137,183,0.26)"></span>
+        <span class="cell" style="background:rgba(233,137,183,0.48)"></span>
+        <span class="cell" style="background:rgba(233,137,183,0.72)"></span>
+        <span class="cell" style="background:#E989B7"></span>
+      </div>
+      <div class="heat">
+        <span class="cell" style="background:rgba(241,236,219,0.05)"></span>
+        <span class="cell" style="background:rgba(91,196,180,0.26)"></span>
+        <span class="cell" style="background:rgba(91,196,180,0.48)"></span>
+        <span class="cell" style="background:rgba(91,196,180,0.72)"></span>
+        <span class="cell" style="background:#5BC4B4"></span>
+      </div>
+    </div>
+    <div class="section donut-row">
+      <svg width="72" height="72" viewBox="0 0 72 72">
+        <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(241,236,219,0.07)" stroke-width="8"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#E989B7" stroke-width="8" stroke-dasharray="75.4 113.1" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#5A63D8" stroke-width="8" stroke-dasharray="47.1 141.4" stroke-dashoffset="-75.4" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#E3C86B" stroke-width="8" stroke-dasharray="37.7 150.8" stroke-dashoffset="-122.5" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#5BC4B4" stroke-width="8" stroke-dasharray="28.3 160.2" stroke-dashoffset="-160.2" transform="rotate(-90 36 36)"/>
+        <text x="36" y="41" text-anchor="middle" font-size="13" fill="#F1ECDB" font-family="ui-monospace, Menlo, monospace">24h</text>
+      </svg>
+      <div class="dlegend">
+        <span><i style="background:#E989B7"></i>Deep work 40%</span>
+        <span><i style="background:#5A63D8"></i>Study 25%</span>
+        <span><i style="background:#E3C86B"></i>Errands 20%</span>
+        <span><i style="background:#5BC4B4"></i>Rest 15%</span>
+      </div>
+    </div>
+    <p class="cap">Night</p>
+  </div>
+  <div class="half day">
+    <div class="section">
+      <h2>Progress — one hue per domain</h2>
+      <div class="bar-row"><span class="lbl">Savings</span><div class="track"><div class="fill" style="width:64%;background:linear-gradient(90deg,#99306B,#CE3D86)"></div></div><span class="val">64</span></div>
+      <div class="bar-row"><span class="lbl">Reading</span><div class="track"><div class="fill" style="width:42%;background:linear-gradient(90deg,#2A2E7A,#3A41B8)"></div></div><span class="val">42</span></div>
+      <div class="bar-row"><span class="lbl">Fitness</span><div class="track"><div class="fill" style="width:78%;background:linear-gradient(90deg,#8A6A1A,#C9A02E)"></div></div><span class="val">78</span></div>
+    </div>
+    <div class="section">
+      <h2>Habit heat — ember &amp; sky ramps</h2>
+      <div class="heat" style="margin-bottom:6px">
+        <span class="cell" style="background:rgba(43,46,102,0.05)"></span>
+        <span class="cell" style="background:rgba(206,61,134,0.26)"></span>
+        <span class="cell" style="background:rgba(206,61,134,0.48)"></span>
+        <span class="cell" style="background:rgba(206,61,134,0.72)"></span>
+        <span class="cell" style="background:#CE3D86"></span>
+      </div>
+      <div class="heat">
+        <span class="cell" style="background:rgba(43,46,102,0.05)"></span>
+        <span class="cell" style="background:rgba(46,159,180,0.26)"></span>
+        <span class="cell" style="background:rgba(46,159,180,0.48)"></span>
+        <span class="cell" style="background:rgba(46,159,180,0.72)"></span>
+        <span class="cell" style="background:#2E9FB4"></span>
+      </div>
+    </div>
+    <div class="section donut-row">
+      <svg width="72" height="72" viewBox="0 0 72 72">
+        <circle cx="36" cy="36" r="30" fill="none" stroke="rgba(43,46,102,0.08)" stroke-width="8"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#CE3D86" stroke-width="8" stroke-dasharray="75.4 113.1" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#3A41B8" stroke-width="8" stroke-dasharray="47.1 141.4" stroke-dashoffset="-75.4" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#C9A02E" stroke-width="8" stroke-dasharray="37.7 150.8" stroke-dashoffset="-122.5" transform="rotate(-90 36 36)"/>
+        <circle cx="36" cy="36" r="30" fill="none" stroke="#2E9FB4" stroke-width="8" stroke-dasharray="28.3 160.2" stroke-dashoffset="-160.2" transform="rotate(-90 36 36)"/>
+        <text x="36" y="41" text-anchor="middle" font-size="13" fill="#2B2E66" font-family="ui-monospace, Menlo, monospace">24h</text>
+      </svg>
+      <div class="dlegend">
+        <span><i style="background:#CE3D86"></i>Deep work 40%</span>
+        <span><i style="background:#3A41B8"></i>Study 25%</span>
+        <span><i style="background:#C9A02E"></i>Errands 20%</span>
+        <span><i style="background:#2E9FB4"></i>Rest 15%</span>
+      </div>
+    </div>
+    <p class="cap">Day</p>
+  </div>
+</body>

@@ -1,0 +1,81 @@
+<!-- @dsCard group="Components" -->
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { display: flex; font-family: system-ui, sans-serif; }
+  .half { flex: 1; padding: 26px; }
+  .night { background: #0F2A1E; }
+  .day { background: #f4efe4; }
+  .panel { position: relative; border: 1px solid; padding: 18px 18px 16px; }
+  .night .panel { background: rgba(21,49,35,0.85); border-color: rgba(241,236,219,0.1); }
+  .day .panel { background: rgba(250,246,236,0.9); border-color: rgba(43,46,102,0.1); }
+  .topline { position: absolute; left: 16px; right: 16px; top: 0; height: 1px; }
+  .night .topline { background: linear-gradient(90deg, transparent, rgba(241,236,219,0.14), transparent); }
+  .day .topline { background: linear-gradient(90deg, transparent, rgba(43,46,102,0.14), transparent); }
+  .corner { position: absolute; width: 7px; height: 7px; border-style: solid; border-color: currentColor; opacity: 0.5; }
+  .night .corner { color: #A2B8A7; } .day .corner { color: #6B6D9E; }
+  .tl { top: 5px; left: 5px; border-width: 1px 0 0 1px; }
+  .br { bottom: 5px; right: 5px; border-width: 0 1px 1px 0; }
+  h2 { font-family: ui-monospace, Menlo, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: baseline; gap: 8px; }
+  .night h2 { color: #A2B8A7; } .day h2 { color: #6B6D9E; }
+  .idx { font-weight: 600; }
+  .night .idx { color: #E3C86B; } .day .idx { color: #C9A02E; }
+  .meta { margin-left: auto; font-size: 10px; letter-spacing: 0.12em; }
+  .night .meta { color: #E989B7; } .day .meta { color: #CE3D86; }
+  .big { font-family: ui-monospace, Menlo, monospace; font-size: 30px; letter-spacing: -0.02em; }
+  .night .big { color: #F1ECDB; } .day .big { color: #2B2E66; }
+  .sub { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+  .night .sub { color: #A2B8A7; } .day .sub { color: #6B6D9E; }
+  .alloc { display: flex; height: 8px; margin-top: 14px; }
+  .alloc span { height: 100%; }
+  .legend { display: flex; gap: 12px; margin-top: 8px; font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .night .legend { color: #6C8877; } .day .legend { color: #989AB8; }
+  .legend i { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 999px; }
+  .cap { margin-top: 14px; font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.55; }
+  .night .cap { color: #A2B8A7; } .day .cap { color: #6B6D9E; }
+</style>
+<body>
+  <div class="half night">
+    <div class="panel">
+      <span class="topline"></span>
+      <span class="corner tl"></span><span class="corner br"></span>
+      <h2><span class="idx">01 /</span> Finance pulse <span class="meta">Open →</span></h2>
+      <p class="sub">Net worth</p>
+      <div class="big">$14,203</div>
+      <div class="alloc">
+        <span style="width:42%;background:#E989B7"></span>
+        <span style="width:26%;background:#5A63D8"></span>
+        <span style="width:18%;background:#E3C86B"></span>
+        <span style="width:14%;background:#5BC4B4"></span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#E989B7"></i>Cash</span>
+        <span><i style="background:#5A63D8"></i>Index</span>
+        <span><i style="background:#E3C86B"></i>Crypto</span>
+        <span><i style="background:#5BC4B4"></i>Other</span>
+      </div>
+    </div>
+    <p class="cap">Panel — night · corner ticks, index numeral, flat allocation bar</p>
+  </div>
+  <div class="half day">
+    <div class="panel">
+      <span class="topline"></span>
+      <span class="corner tl"></span><span class="corner br"></span>
+      <h2><span class="idx">01 /</span> Finance pulse <span class="meta">Open →</span></h2>
+      <p class="sub">Net worth</p>
+      <div class="big">$14,203</div>
+      <div class="alloc">
+        <span style="width:42%;background:#CE3D86"></span>
+        <span style="width:26%;background:#3A41B8"></span>
+        <span style="width:18%;background:#C9A02E"></span>
+        <span style="width:14%;background:#2E9FB4"></span>
+      </div>
+      <div class="legend">
+        <span><i style="background:#CE3D86"></i>Cash</span>
+        <span><i style="background:#3A41B8"></i>Index</span>
+        <span><i style="background:#C9A02E"></i>Crypto</span>
+        <span><i style="background:#2E9FB4"></i>Other</span>
+      </div>
+    </div>
+    <p class="cap">Panel — day · same geometry, four-hue data on paper</p>
+  </div>
+</body>

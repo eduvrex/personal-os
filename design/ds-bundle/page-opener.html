@@ -1,0 +1,68 @@
+<!-- @dsCard group="Brand" -->
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { display: flex; font-family: system-ui, sans-serif; }
+  .half { flex: 1; padding: 34px 30px 26px; position: relative; overflow: hidden; }
+  .night { background: #0F2A1E; }
+  .day { background: #f4efe4; }
+  .ghost { position: absolute; top: -6px; left: 12px; font-family: Fraunces, Didot, Georgia, serif; font-size: 110px; line-height: 1; color: transparent; white-space: nowrap; user-select: none; }
+  .night .ghost { -webkit-text-stroke: 1px rgba(241,236,219,0.1); }
+  .day .ghost { -webkit-text-stroke: 1px rgba(43,46,102,0.1); }
+  .wash { position: absolute; top: -40px; left: -40px; width: 380px; height: 200px; }
+  .night .wash { background: radial-gradient(50% 50% at 40% 45%, rgba(240,233,213,0.12), transparent 70%); }
+  .day .wash { background:
+    radial-gradient(45% 45% at 34% 40%, rgba(206,61,134,0.14), transparent 70%),
+    radial-gradient(40% 40% at 65% 30%, rgba(125,130,207,0.18), transparent 70%); }
+  .disc { position: absolute; border-radius: 999px; }
+  .night .d1 { top: 30px; right: -34px; width: 96px; height: 96px; border: 1px solid rgba(241,236,219,0.3); }
+  .night .d2 { top: 96px; right: 26px; width: 14px; height: 14px; background: #5BC4B4; }
+  .day .d1 { top: -30px; right: 34px; width: 88px; height: 44px; border-radius: 0 0 88px 88px; background: #C9A02E; opacity: 0.9; }
+  .day .d2 { top: 78px; right: 22px; width: 14px; height: 14px; background: #2E9FB4; }
+  .reg { position: absolute; font-family: ui-monospace, Menlo, monospace; font-size: 11px; opacity: 0.5; }
+  .night .reg { color: #F1ECDB; } .day .reg { color: #2B2E66; }
+  .folio { position: relative; font-family: ui-monospace, Menlo, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; display: flex; justify-content: space-between; }
+  .night .folio { color: #A2B8A7; } .day .folio { color: #6B6D9E; }
+  .folio b { font-weight: 500; }
+  .night .folio b { color: #E989B7; } .day .folio b { color: #CE3D86; }
+  .folio .coord { opacity: 0.7; }
+  h1 { position: relative; font-family: Fraunces, Didot, Georgia, serif; font-weight: 500; font-size: 58px; line-height: 0.95; }
+  .night h1 { color: #F1ECDB; } .day h1 { color: #2B2E66; }
+  .cluster { position: relative; display: inline-block; margin-left: 10px; }
+  .cluster .a { font-size: 24px; vertical-align: super; }
+  .night .a1 { color: #E989B7; } .day .a1 { color: #CE3D86; }
+  .cluster .a2 { font-size: 15px; margin-left: -4px; }
+  .night .a2 { color: #E3C86B; } .day .a2 { color: #C9A02E; }
+  .cluster .a3 { font-size: 11px; margin-left: -3px; vertical-align: 26px; }
+  .night .a3 { color: #5BC4B4; } .day .a3 { color: #3A41B8; }
+  .rule { position: relative; display: flex; align-items: center; gap: 10px; margin-top: 18px; }
+  .rule .block { width: 48px; height: 3px; flex: none; }
+  .night .rule .block { background: #F1ECDB; }
+  .day .rule .block { background: #2B2E66; }
+  .rule .line { height: 1px; flex: 1; }
+  .night .rule .line { background: rgba(241,236,219,0.12); }
+  .day .rule .line { background: rgba(43,46,102,0.14); }
+  .rule .sig { font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: 0.3em; }
+  .night .rule .sig { color: #6C8877; } .day .rule .sig { color: #989AB8; }
+</style>
+<body>
+  <div class="half night">
+    <span class="ghost">Finance</span>
+    <span class="wash"></span>
+    <span class="disc d1"></span><span class="disc d2"></span>
+    <span class="reg" style="bottom:12px;left:12px">+</span>
+    <span class="reg" style="top:12px;right:14px">+</span>
+    <p class="folio"><span><b>№ 06</b> — Money</span><span class="coord">FY26 · W27</span></p>
+    <h1>Finance<span class="cluster"><span class="a a1">✳</span><span class="a a2">✳</span><span class="a a3">✳</span></span></h1>
+    <div class="rule"><span class="block"></span><span class="line"></span><span class="sig">PERSONAL OS</span></div>
+  </div>
+  <div class="half day">
+    <span class="ghost">Finance</span>
+    <span class="wash"></span>
+    <span class="disc d1"></span><span class="disc d2"></span>
+    <span class="reg" style="bottom:12px;left:12px">+</span>
+    <span class="reg" style="top:12px;right:14px">+</span>
+    <p class="folio"><span><b>№ 06</b> — Money</span><span class="coord">FY26 · W27</span></p>
+    <h1>Finance<span class="cluster"><span class="a a1">✳</span><span class="a a2">✳</span><span class="a a3">✳</span></span></h1>
+    <div class="rule"><span class="block"></span><span class="line"></span><span class="sig">PERSONAL OS</span></div>
+  </div>
+</body>

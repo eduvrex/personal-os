@@ -1,0 +1,34 @@
+<!-- @dsCard group="Type" -->
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body { background: #0F2A1E; color: #F1ECDB; padding: 28px 32px; font-family: system-ui, sans-serif; position: relative; overflow: hidden; }
+  .reg { position: absolute; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #F1ECDB; opacity: 0.5; }
+  .note { font-family: ui-monospace, Menlo, monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #6C8877; margin-bottom: 18px; }
+  .display { font-family: Fraunces, Didot, "Playfair Display", Georgia, serif; font-size: 56px; line-height: 0.95; }
+  .display em { font-style: italic; color: #E989B7; }
+  .ast1 { color: #E989B7; font-size: 22px; vertical-align: super; }
+  .ast2 { color: #E3C86B; font-size: 14px; margin-left: -3px; }
+  .ast3 { color: #5BC4B4; font-size: 10px; vertical-align: 24px; margin-left: -2px; }
+  .label { font-family: ui-monospace, Menlo, monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: #A2B8A7; margin: 22px 0 4px; }
+  .label b { font-weight: 600; color: #E3C86B; }
+  .body { font-size: 14px; color: #F1ECDB; max-width: 42ch; line-height: 1.5; }
+  .mono { font-family: ui-monospace, Menlo, monospace; font-size: 28px; letter-spacing: -0.02em; margin-top: 14px; }
+  .mono .up { color: #5BC4B4; }
+  .mono .idx { color: #5A63D8; }
+  .row { display: flex; gap: 40px; align-items: baseline; margin-top: 20px; border-top: 1px solid rgba(241,236,219,0.1); padding-top: 14px; }
+  .spec { font-family: ui-monospace, Menlo, monospace; font-size: 10px; color: #6C8877; }
+</style>
+<body>
+  <span class="reg" style="top:10px;right:14px">+</span>
+  <span class="reg" style="bottom:10px;left:14px">+</span>
+  <p class="note">Type — Fraunces display · Inter UI · IBM Plex Mono data</p>
+  <div class="display">Good evening, <em>Eduardo</em>.<span class="ast1">✳</span><span class="ast2">✳</span><span class="ast3">✳</span></div>
+  <p class="label"><b>02 /</b> Section label — tracked mono 10px / 0.15em</p>
+  <p class="body">Body copy sits in the quiet grotesk. It stays out of the way while the serif takes the stage and the mono carries every number — each domain keeps its own hue.</p>
+  <div class="mono">$14,203 <span class="up">▲2.4%</span> · 22:53:54 <span class="idx">№128</span></div>
+  <div class="row">
+    <span class="spec">DISPLAY — Fraunces var (opsz, SOFT), italic for emphasis</span>
+    <span class="spec">UI — Inter</span>
+    <span class="spec">DATA — Plex Mono 400/500/600</span>
+  </div>
+</body>
